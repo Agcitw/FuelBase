@@ -1,0 +1,79 @@
+﻿@model FuelBase.Models.Transport
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Transport</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="RouteNumber" class="control-label"></label>
+                <input asp-for="RouteNumber" class="form-control" />
+                <span asp-validation-for="RouteNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransportType" class="control-label"></label>
+                <input asp-for="TransportType" class="form-control" />
+                <span asp-validation-for="TransportType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CargoType" class="control-label"></label>
+                <input asp-for="CargoType" class="form-control" />
+                <span asp-validation-for="CargoType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CargoNowTon" class="control-label"></label>
+                <input asp-for="CargoNowTon" class="form-control" />
+                <span asp-validation-for="CargoNowTon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CargoCapacityTon" class="control-label"></label>
+                <input asp-for="CargoCapacityTon" class="form-control" />
+                <span asp-validation-for="CargoCapacityTon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuelType" class="control-label"></label>
+                <input asp-for="FuelType" class="form-control" />
+                <span asp-validation-for="FuelType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuelNowLitre" class="control-label"></label>
+                <input asp-for="FuelNowLitre" class="form-control" />
+                <span asp-validation-for="FuelNowLitre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuelCapacityLitre" class="control-label"></label>
+                <input asp-for="FuelCapacityLitre" class="form-control" />
+                <span asp-validation-for="FuelCapacityLitre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GpsLatitudeNow" class="control-label"></label>
+                <input asp-for="GpsLatitudeNow" class="form-control" />
+                <span asp-validation-for="GpsLatitudeNow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GpsLongitudeNow" class="control-label"></label>
+                <input asp-for="GpsLongitudeNow" class="form-control" />
+                <span asp-validation-for="GpsLongitudeNow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
